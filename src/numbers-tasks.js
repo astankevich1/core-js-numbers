@@ -105,12 +105,16 @@ function getLinearEquationRoot(a, b) {
  *   (0,-1) (1,0)    => π/2
  *   (0,1) (0,1)     => 0
  */
-function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
-  throw new Error('Not implemented');
+function getAngleBetweenVectors(x1, y1, x2, y2) {
+  const scal = x1 * x2 + y1 * y2;
+  const mod1 = Math.hypot(x1, y1);
+  const mod2 = Math.hypot(x2, y2);
+
+  return Math.acos(scal / (mod1 * mod2));
 }
 
 /**
- * Returns a last digit of a integer number.
+ * Returns a last digit of an integer number.
  * The input parameter will always be greater than or equal to zero and will be in decimal notation.
  *
  * @param {number} value
@@ -122,8 +126,8 @@ function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
  *     5     => 5
  *     0     => 0
  */
-function getLastDigit(/* value */) {
-  throw new Error('Not implemented');
+function getLastDigit(value) {
+  return value % 10;
 }
 
 /**
@@ -137,8 +141,8 @@ function getLastDigit(/* value */) {
  *     '37'     => 37
  * '-525.5'     => -525.5
  */
-function parseNumberFromString(/* value */) {
-  throw new Error('Not implemented');
+function parseNumberFromString(value) {
+  return Number(value);
 }
 
 /**
@@ -154,8 +158,8 @@ function parseNumberFromString(/* value */) {
  *   3,3,3   => 5.196152422706632
  *   1,2,3   => 3.741657386773941
  */
-function getParallelepipedDiagonal(/* a, b, c */) {
-  throw new Error('Not implemented');
+function getParallelepipedDiagonal(a, b, c) {
+
 }
 
 /**
